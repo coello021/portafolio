@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Portafolio de Ingeniero de Datos"
+description = "Sitio de portafolio profesional en español para un ingeniero de datos, con perfil, experiencia, proyectos, tecnologías y contacto."
+version = "1.0.0"
+id = "artifacts/data-engineer-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23562
+
+[services.development]
+run = "pnpm --filter @workspace/data-engineer-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/data-engineer-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/data-engineer-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23562"
+BASE_PATH = "/"
