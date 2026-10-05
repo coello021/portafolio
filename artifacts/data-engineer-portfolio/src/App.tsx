@@ -119,8 +119,8 @@ function App() {
       <header className="sticky top-0 z-50 border-b border-[#193f36]/10 bg-[#f2f0e6]/95 backdrop-blur-md">
         <div className="section-wrap flex h-[72px] items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3" aria-label="Volver al inicio" data-testid="link-inicio">
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-[#315f52]/30 font-mono text-xs font-medium">MR</span>
-            <span className="font-display text-[13px] font-bold tracking-[-.03em]">Mateo Ríos<span className="ml-1 text-[#dd7555]">.</span></span>
+            <span className="grid h-9 w-9 place-items-center rounded-full border border-[#315f52]/30 font-mono text-xs font-medium">OC</span>
+            <span className="font-display text-[13px] font-bold tracking-[-.03em]">Oscar Coello<span className="ml-1 text-[#dd7555]">.</span></span>
           </a>
           <nav className="desktop-nav flex items-center gap-8" aria-label="Navegación principal">
             {navItems.map(([label, href]) => <a className="nav-link text-[13px] text-[#47645b] hover:text-[#193f36]" href={href} key={href} data-testid={`link-nav-${label.toLowerCase()}`}>{label}</a>)}
@@ -136,18 +136,18 @@ function App() {
       <section id="inicio" className="relative overflow-hidden border-b border-[#193f36]/10">
         <div className="section-wrap relative grid min-h-[700px] items-center gap-12 py-16 lg:grid-cols-[1.1fr_.9fr] lg:py-24">
           <div className="relative z-10 max-w-[660px]">
-            <div className="eyebrow reveal mb-7 flex items-center gap-3 text-[#557166]"><span className="h-px w-8 bg-[#dd7555]" /> Ingeniería de datos · Latinoamérica</div>
+            <div className="eyebrow reveal mb-7 flex items-center gap-3 text-[#557166]"><span className="h-px w-8 bg-[#dd7555]" /> Análisis de datos · El Salvador</div>
             <h1 className="hero-title font-display reveal reveal-delay-1 max-w-[720px] text-[clamp(4.3rem,8.6vw,7.6rem)] font-semibold leading-[.91] tracking-[-.085em]">
               El dato útil<br />no aparece.<br /><span className="text-[#dd7555]">Se construye.</span>
             </h1>
             <p className="reveal reveal-delay-2 mt-8 max-w-[490px] text-[17px] leading-[1.7] text-[#53695f]">
-              Soy Mateo, ingeniero de datos. Convierto fuentes desordenadas en sistemas confiables que ayudan a los equipos a decidir con claridad.
+              Soy Oscar, estudiante de Ingeniería en Sistemas. Me enfoco en el análisis de datos y el desarrollo de software: convierto datos desordenados en información clara para decidir mejor.
             </p>
             <div className="reveal reveal-delay-3 mt-9 flex flex-wrap items-center gap-5">
               <a className="inline-flex items-center gap-3 rounded-full bg-[#315f52] px-5 py-3.5 text-[13px] font-semibold text-[#f2f0e6] transition hover:-translate-y-0.5 hover:bg-[#234b40]" href="#trabajo" data-testid="link-ver-trabajo">Ver cómo trabajo <ArrowDown size={15} /></a>
               <a className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#315f52] underline decoration-[#315f52]/35 underline-offset-4 hover:decoration-[#315f52]" href="#contacto" data-testid="link-contacto-hero">Estoy abierto a conversar <ArrowUpRight size={14} /></a>
             </div>
-            <p className="eyebrow mt-12 text-[#8a9386]">Identidad y contenido de muestra · reemplazar antes de publicar</p>
+            <p className="eyebrow mt-12 text-[#8a9386]">Casos de ejemplo · reemplazar por proyectos reales</p>
           </div>
           <div className="relative mx-auto w-full max-w-[560px] lg:ml-auto">
             <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full border border-[#dd7555]/30" />
@@ -238,15 +238,15 @@ function App() {
       <section className="bg-[#e4e2d6]">
         <div className="section-wrap section-pad">
           <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
-            <div><p className="eyebrow mb-5 text-[#dd7555]">05 / Caja de herramientas</p><h2 className="font-display text-5xl font-semibold leading-[1.02] tracking-[-.07em]">Pragmático con<br />la tecnología.</h2><p className="mt-6 max-w-[330px] text-sm leading-7 text-[#64766c]">El stack es un medio, no una identidad. Estas son piezas que uso o exploro; el contexto manda.</p></div>
+            <div><p className="eyebrow mb-5 text-[#dd7555]">05 / Caja de herramientas</p><h2 className="font-display text-5xl font-semibold leading-[1.02] tracking-[-.07em]">Pragmático con<br />la tecnología.</h2><p className="mt-6 max-w-[330px] text-sm leading-7 text-[#64766c]">El stack es un medio, no una identidad. Estas son las herramientas que uso hoy y sigo aprendiendo.</p></div>
             <div className="grid gap-x-8 sm:grid-cols-2">
               {[
-                ['Modelado', 'SQL · dbt · dimensional'],
-                ['Programación', 'Python · Bash · notebooks'],
-                ['Plataforma', 'Warehouses · object storage'],
-                ['Operación', 'Git · CI/CD · orquestación'],
-                ['Calidad', 'Tests · contratos · alertas'],
-                ['Colaboración', 'RFCs · documentación · revisión'],
+                ['Visualización', 'Power BI · DAX · dashboards'],
+                ['Modelado', 'Esquema estrella · SQL'],
+                ['Programación', 'Python · pandas · notebooks'],
+                ['Bases de datos', 'SQLite · Excel'],
+                ['Automatización', 'Power Platform · scripts'],
+                ['Control de versiones', 'Git · GitHub · Node.js'],
               ].map(([label, value], i) => <div key={label} className="flex gap-4 border-b border-[#193f36]/15 py-5">
                 <span className="font-mono text-[10px] text-[#dd7555]">0{i + 1}</span><div><p className="font-display text-[15px] font-semibold">{label}</p><p className="mt-1 font-mono text-[10px] leading-5 text-[#64766c]">{value}</p></div>
               </div>)}
@@ -258,15 +258,15 @@ function App() {
       <section id="perfil" className="section-wrap section-pad">
         <div className="grid gap-14 md:grid-cols-[.65fr_1.35fr]">
           <div><p className="eyebrow mb-5 text-[#dd7555]">06 / Perfil</p><div className="relative grid aspect-[4/4.5] max-w-[330px] place-items-center overflow-hidden bg-[#315f52] text-[#f2f0e6]">
-            <div className="absolute inset-4 border border-[#f2f0e6]/25" /><div className="absolute left-8 top-8 font-mono text-[9px] tracking-[.14em] text-[#c3d5c8]">MR / EN CONSTRUCCIÓN</div>
-            <div className="relative"><div className="font-display text-[130px] font-semibold leading-none tracking-[-.12em]">M<span className="text-[#e28a6d]">.</span></div><div className="mt-1 text-right font-mono text-[9px] uppercase tracking-[.18em] text-[#c3d5c8]">ingeniería + curiosidad</div></div>
-            <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between border-t border-[#f2f0e6]/25 pt-3"><span className="font-mono text-[9px] uppercase tracking-[.1em]">Latinoamérica</span><span className="font-mono text-[9px]">[ TU CIUDAD ]</span></div>
+            <div className="absolute inset-4 border border-[#f2f0e6]/25" /><div className="absolute left-8 top-8 font-mono text-[9px] tracking-[.14em] text-[#c3d5c8]">OC / EN CONSTRUCCIÓN</div>
+            <div className="relative"><div className="font-display text-[130px] font-semibold leading-none tracking-[-.12em]">O<span className="text-[#e28a6d]">.</span></div><div className="mt-1 text-right font-mono text-[9px] uppercase tracking-[.18em] text-[#c3d5c8]">ingeniería + curiosidad</div></div>
+            <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between border-t border-[#f2f0e6]/25 pt-3"><span className="font-mono text-[9px] uppercase tracking-[.1em]">Ing. en Sistemas</span><span className="font-mono text-[9px]">EL SALVADOR</span></div>
           </div></div>
           <div className="pt-1">
             <p className="font-display max-w-[680px] text-[clamp(2.1rem,4.2vw,3.8rem)] font-medium leading-[1.12] tracking-[-.065em]">Me interesa el espacio entre <span className="text-[#dd7555]">“tenemos datos”</span> y “sabemos qué hacer”.</p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <p className="text-[13px] leading-7 text-[#62746b]">Ese espacio suele llenarse de definiciones duplicadas, procesos frágiles y preguntas que nadie sabe responder con confianza. Ahí es donde disfruto trabajar.</p>
-              <p className="text-[13px] leading-7 text-[#62746b]">Trabajo desde Latinoamérica, con equipos distribuidos y realidades de datos muy distintas. Valoro la claridad, las decisiones reversibles y aprender del dominio antes de elegir el framework.</p>
+              <p className="text-[13px] leading-7 text-[#62746b]">Estudio Ingeniería en Sistemas en El Salvador y trabajo con Power BI, DAX y Python en proyectos de logística y digitalización de procesos. Valoro la claridad y aprender del problema antes de elegir la herramienta.</p>
             </div>
             <div className="mt-10 flex flex-wrap gap-2">{['Curiosidad antes que dogma', 'Claridad sobre complejidad', 'Calidad desde el diseño'].map(item => <span key={item} className="rounded-full border border-[#315f52]/20 px-3 py-2 font-mono text-[9px] uppercase tracking-[.04em] text-[#526960]">{item}</span>)}</div>
           </div>
@@ -291,8 +291,8 @@ function App() {
 
       <footer className="bg-[#193f36] text-[#f2f0e6]">
         <div className="section-wrap flex flex-col gap-5 py-7 sm:flex-row sm:items-center sm:justify-between">
-          <a href="#inicio" className="font-display text-sm font-bold tracking-[-.03em]" data-testid="link-pie-inicio">Mateo Ríos<span className="text-[#e28a6d]">.</span></a>
-          <p className="font-mono text-[9px] uppercase tracking-[.08em] text-[#afc2b5]">Identidad de muestra · Latinoamérica · © {new Date().getFullYear()}</p>
+          <a href="#inicio" className="font-display text-sm font-bold tracking-[-.03em]" data-testid="link-pie-inicio">Oscar Coello<span className="text-[#e28a6d]">.</span></a>
+          <p className="font-mono text-[9px] uppercase tracking-[.08em] text-[#afc2b5]">El Salvador · <a className="underline underline-offset-2" href="https://github.com/coello021" target="_blank" rel="noreferrer" data-testid="link-github">github.com/coello021</a> · © {new Date().getFullYear()}</p>
           <a href="#inicio" className="arrow-link inline-flex items-center gap-2 text-[11px] text-[#d6e0d5]" data-testid="link-volver-arriba">Volver arriba <ArrowUpRight size={13} /></a>
         </div>
       </footer>
